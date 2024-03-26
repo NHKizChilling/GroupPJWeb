@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    font-weight: bolder;
+    font-style: italic;
+    
+}
+
+#modal-sign {
+    background: linear-gradient(to right, lightblue, white);
+    font-weight: bolder;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: linear-gradient(lightgreen, whitesmoke);
+    font-weight: bolder;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner {
+    background-image: linear-gradient(to right, lightblue, white);
+    background-size: cover;
+    background-position: center;
+    color: lightcoral;
+    font-size: 2rem;
+    font-weight: bolder;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
