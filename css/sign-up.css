@@ -1,0 +1,147 @@
+
+body {
+  background: linear-gradient(to right, #2c5263, #3b7c91, #3fa4d0);
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+#form {
+  width: 500px;
+  margin: 20px auto;
+  max-height: 100vh;
+  padding: 20px;
+  background-color: transparent;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+#form h1 {
+  color: #0f2027;
+  font-weight: bold;
+  text-shadow: 0px 0px 5px lightblue;
+  text-align: center;
+}
+
+#form button {
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  color: white;
+  font-size: medium;
+  background-color: darkblue;
+  border: none;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+.input-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  font-size: 12px;
+  padding: 10px;
+  width: 100%;
+}
+
+.input-control input:focus {
+  outline: 5;
+  outline-color: lightskyblue;
+  box-shadow: 0px 0px 5px lightskyblue;
+}
+
+.input-control.success input {
+  border-color: #09c372;
+}
+
+.input-control.error input {
+  border-color: #ff3860;
+}
+
+.input-control .error {
+  color: #ff3860;
+  font-size: 9px;
+  height: 13px;
+}
+
+.link>a {
+  color: #333;
+  text-decoration: none;
+}
+
+.link>a:hover {
+  color: lightblue;
+}
+
+.link>#link-signin {
+  float: right;
+}
+
+.link>#link-signin a {
+  color: lightblue;
+  text-decoration: none;
+}
+
+.link>#link-signin a:hover {
+  color: aqua;
+}
+
+.others-signin {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.others-signin>p {
+  background-color: transparent;
+  position: relative;
+}
+
+.others-signin>p::before {
+  content: "";
+  background-color: #333;
+  height: 0.5px;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 47%;
+}
+
+.others-signin>p:after {
+  content: "";
+  background-color: #333;
+  height: 0.5px;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  width: 47%;
+}
+
+.sign-fgg>#sign-fb {
+  background-color: rgb(55, 55, 249);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-fgg>#sign-gg {
+  background-color: white;
+  color: black;
+  padding: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-fgg>#sign-git {
+  background-color: white;
+  color: black;
+  padding: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

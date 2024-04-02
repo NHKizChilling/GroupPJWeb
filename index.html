@@ -26,10 +26,9 @@
               </button>
               <div class="collapse navbar-collapse justify-content-end" id="menu">
                   <ul class="navbar-nav">
-                      <li class="nav-item"><a href="./index.html" class="nav-link text-white"><i class="fa fa-home fa-lg"></i> Home</a></li>
+                      <li class="nav-item"><a href="index.html" class="nav-link text-white"><i class="fa fa-home fa-lg"></i> Home</a></li>
                       <li class="nav-item dropdown mx-3"><a href="" class="nav-link text-white" data-bs-toggle="dropdown"><i class="fa fa-bars fa-lg"></i> Category</a>
                           <div class="dropdown-menu">
-                              <a href="./html/product.html" class="dropdown-item"><i class="fa fa-archive"> ALL</i></a>
                               <a href="" class="dropdown-item"><i class="fa fa-desktop"> PC</i></a>
                               <a href="" class="dropdown-item"><i class="fa fa-laptop"> Laptop</i></a>
                               <a href="" class="dropdown-item"><i class="fa fa-television"> Monitor</i></a>
@@ -42,108 +41,36 @@
                       <li class="nav-item"><a href="" class="nav-link text-white"><i class="fa fa-shopping-cart fa-lg"></i><br>Cart</a></li>
                   </ul>
               </div>
-              <button type="button" class="btn btn-light border-0 rounded-5 d-flex align-items-center justify-content-center ms-2 me-2" data-bs-toggle="modal" data-bs-target="#modal-signin"><i class="fa fa-user fa-lg"></i> Log in &nbsp
-              </button>
-              <!-- Modal log -->
-              <div class="modal fade" id="modal-signin">
-                  <div class="modal-dialog">
-                      <div class="modal-content">
-                          <div class="modal-header">
-                              <div class="modal-title">Sign in</div>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                          </div>
-                          <div class="modal-body">
-                              <div class="container" id="sign-in">
-                                  <form action="">
-                                      <div class="form-floating">
-                                          <input type="email" name="email" id="email" class="form-control mt-3" placeholder="Enter email">
-                                          <label for="email">Enter email</label>
-                                      </div>
-                                      <div class="form-floating">
-                                          <input type="password" name="password" id="password" class="form-control mt-3" placeholder="Enter password">
-                                          <label for="password">Enter password</label>
-                                      </div>
-                                      <div class="form-check mt-3">
-                                          <input type="checkbox" name="remember" id="remember" class="form-check-input">
-                                          <label for="remember" class="form-check-label">Remember me</label>
-                                      </div>
-                                      <input type="submit" name="submit" id="submit" class="btn btn-success p-2 rounded-5 mt-3 w-100" value="Log in">
-                                      <div class="float-end mb-3">Don't Have An Account? <a href="#sign-up" data-bs-toggle="modal" data-bs-target="#modal-signup">Sign up</a></div>
-                                      
-                                      <button type="button" class="btn btn-primary rounded-5 w-100 mt-3 mb-3 d-flex justify-content-center align-items-center">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                                              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-                                          </svg> &nbsp; Continue with Facebook
-                                      </button>
-                                      <button type="button" class="btn btn-light rounded-5 w-100 d-flex justify-content-center align-items-center">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
-                                              <path d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z"/>
-                                          </svg>&nbsp;Continue with Google
-                                      </button>
-                                  </form>
-                              </div>
-                          </div>
-                          <div class="modal-footer">
-                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                          </div>
-                      </div>
-                  </div>
+              <div class="btn-group w-25 rounded-5" id="btn-group">
+                <button type="button" id="btn-signin" class="btn btn-secondary rounded-5 ps-0 pe-0 w-50">
+                  Sign in
+                </button>
+                <button type="button" id="btn-signup" class="btn btn-light rounded-end-5 ps-0 pe-0 border-0">
+                  Sign up
+                </button>
               </div>
-              <div class="modal fade" id="modal-signup">
-                  <div class="modal-dialog modal-dialog-scrollable">
-                      <div class="modal-content">
-                          <div class="modal-header">
-                              <div class="modal-title">Đăng ký</div>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                          </div>
-                          <div class="modal-body">
-                              <div class="container" id="sign-up">
-                                  <form action="">
-                                      <div class="form-floating">
-                                          <input type="text" name="name" id="name" class="form-control mt-3" placeholder="Enter name">
-                                          <label for="name">Enter name</label>
-                                      </div>
-                                      <div class="form-floating">
-                                          <input type="email" name="email" id="email" class="form-control mt-3" placeholder="Enter email">
-                                          <label for="email">Enter email</label>
-                                      </div>
-                                      <div class="form-floating">
-                                          <input type="password" name="password" id="password" class="form-control mt-3" placeholder="Enter password">
-                                          <label for="password">Enter password</label>
-                                      </div>
-                                      <div class="form-floating">
-                                          <input type="password" name="re-password" id="re-password" class="form-control mt-3" placeholder="Re-enter password">
-                                          <label for="re-password">Re-enter password</label>
-                                      </div>
-                                      <input type="submit" name="submit" id="submit" class="btn btn-info w-100 mt-3" value="Đăng ký">
-                                      <div class="float-end mb-3">Bạn đã có tài khoản? <a href="#sign-in" data-bs-toggle="modal" data-bs-target="#modal-signin">Đăng nhập</a></div>
-
-                                      <button type="button" class="btn btn-primary rounded-5 w-100 mt-3 mb-3 d-flex justify-content-center align-items-center">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                                              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-                                          </svg> &nbsp; Continue with Facebook
-                                      </button>
-                                      <button type="button" class="btn btn-light rounded-5 w-100 d-flex justify-content-center align-items-center">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
-                                              <path d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z"/>
-                                          </svg>&nbsp;Continue with Google
-                                      </button>
-                                  </form>
-                              </div>
-                          </div>
-                          <div class="modal-footer">
-                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <!-- end modal -->
+              <script>
+                document.getElementById("btn-group").style.backgroundColor = "white";
+                document.getElementById("btn-signin").addEventListener("click", function(){
+                  window.location.href = "./html/sign-in.html";
+                });
+                document.getElementById("btn-signup").addEventListener("click", function(){
+                  window.location.href = "./html/sign-up.html";
+                });
+                document.getElementById("btn-signup").addEventListener("mouseover", function(){
+                  document.getElementById("btn-group").style.backgroundColor = "gray";
+                  document.getElementById("btn-signup").style.backgroundColor = "gray";
+                });
+                document.getElementById("btn-signup").addEventListener("mouseout", function(){
+                  document.getElementById("btn-group").style.backgroundColor = "white";
+                  document.getElementById("btn-signup").style.backgroundColor = "white";
+                });
+              </script>
           </div>
       </nav>
-    </div>
   </div>
   <!-- End header -->
-  
+    </div>
   <div class="container mt-2" id="content">
     <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
@@ -158,16 +85,16 @@
       <!-- The slideshow/carousel -->
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="./images/slide1.webp" alt="Los Angeles" class="d-block" style="width:100%">
+          <img src="../images/slide1.webp" alt="Los Angeles" class="d-block" style="width:100%">
         </div>
         <div class="carousel-item">
-          <img src="./images/slide2.webp" alt="Chicago" class="d-block" style="width:100%">
+          <img src="../images/slide2.webp" alt="Chicago" class="d-block" style="width:100%">
         </div>
         <div class="carousel-item">
-          <img src="./images/slide3.webp" alt="New York" class="d-block" style="width:100%">
+          <img src="../images/slide3.webp" alt="New York" class="d-block" style="width:100%">
         </div>
         <div class="carousel-item">
-          <img src="./images/slide4.webp" alt="New York" class="d-block" style="width:100%">
+          <img src="../images/slide4.webp" alt="New York" class="d-block" style="width:100%">
         </div>
       </div>
       
@@ -185,82 +112,40 @@
       <div class="row mt-3">
         <div class="col-sm-3">
           <div class="card">
-            <img src="./image/pc1.jpg" class="card-img-top" alt="...">
+            <img src="../images/black.png" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">PC 1</h5>
-              <p class="card-text">Some example text.</p>
+              <h5 class="card-title">Tai nghe</h5>
+              <p class="card-text">Some example text. <br> <br></p>
+              <a href="../HTML/products.html" class="btn btn-primary">See more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <img src="../images/front.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Laptop</h5>
+              <p class="card-text">Laptop Asus ROG Strix G16 G614JU-N3135W</p>
               <a href="#" class="btn btn-primary">See more</a>
             </div>
           </div>
         </div>
         <div class="col-sm-3">
           <div class="card">
-            <img src="./image/pc2.jpg" class="card-img-top" alt="...">
+            <img src="../images/frontpc.svg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">PC 2</h5>
-              <p class="card-text">Some example text.</p>
+              <h5 class="card-title">Máy tính bàn</h5>
+              <p class="card-text">ROG Strix XG309CM <br><br><br><br><br></p>
               <a href="#" class="btn btn-primary">See more</a>
             </div>
           </div>
         </div>
         <div class="col-sm-3">
           <div class="card">
-            <img src="../image/pc3.jpg" class="card-img-top" alt="...">
+            <img src="../images/keyboard1.svg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">PC 3</h5>
-              <p class="card-text">Some example text.</p>
-              <a href="#" class="btn btn-primary">See more</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="card">
-            <img src="../image/pc4.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">PC 4</h5>
-              <p class="card-text">Some example text.</p>
-              <a href="#" class="btn btn-primary">See more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row mt-3">
-        <div class="col-sm-3">
-          <div class="card">
-            <img src="../image/pc1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">PC 1</h5>
-              <p class="card-text">Some example text.</p>
-              <a href="#" class="btn btn-primary">See more</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="card">
-            <img src="../image/pc2.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">PC 2</h5>
-              <p class="card-text">Some example text.</p>
-              <a href="#" class="btn btn-primary">See more</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="card">
-            <img src="../image/pc3.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">PC 3</h5>
-              <p class="card-text">Some example text.</p>
-              <a href="#" class="btn btn-primary">See more</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="card">
-            <img src="../image/pc4.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">PC 4</h5>
-              <p class="card-text">Some example text.</p>
+              <h5 class="card-title">Bàn phím cơ</h5>
+              <p class="card-text">Bàn Phím Cơ Bluetooth Dareu EK75 Pro <br><br><br><br> <br></p>
               <a href="#" class="btn btn-primary">See more</a>
             </div>
           </div>
@@ -269,40 +154,82 @@
       <div class="row mt-3">
         <div class="col-sm-3">
           <div class="card">
-            <img src="../image/pc1.jpg" class="card-img-top" alt="...">
+            <img src="../images/mouse1.svg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">PC 1</h5>
-              <p class="card-text">Some example text.</p>
+              <h5 class="card-title">Chuột</h5>
+              <p class="card-text">Wireless Mouse Logitech G304 Lightspeed. <br><br></p>
               <a href="#" class="btn btn-primary">See more</a>
             </div>
           </div>
         </div>
         <div class="col-sm-3">
           <div class="card">
-            <img src="../image/pc2.jpg" class="card-img-top" alt="...">
+            <img src="../images/picindexlaptoplenovo.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">PC 2</h5>
-              <p class="card-text">Some example text.</p>
+              <h5 class="card-title">Laptop</h5>
+              <p class="card-text">Laptop Lenovo IdeaPad 3 15IAU7 82RK001PVN</p>
               <a href="#" class="btn btn-primary">See more</a>
             </div>
           </div>
         </div>
         <div class="col-sm-3">
           <div class="card">
-            <img src="../image/pc3.jpg" class="card-img-top" alt="...">
+            <img src="../images/picmanhinhSamSung.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">PC 3</h5>
-              <p class="card-text">Some example text.</p>
+              <h5 class="card-title">Màn hình</h5>
+              <p class="card-text">Màn hình Samsung LS27CG510 27" 2K 16</p>
               <a href="#" class="btn btn-primary">See more</a>
             </div>
           </div>
         </div>
         <div class="col-sm-3">
           <div class="card">
-            <img src="../image/pc4.jpg" class="card-img-top" alt="...">
+            <img src="../images/picindexLogictech.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">PC 4</h5>
-              <p class="card-text">Some example text.</p>
+              <h5 class="card-title">Chuột</h5>
+              <p class="card-text">Chuột Logitech G502 X Plus LightSpeed White</p>
+              <a href="#" class="btn btn-primary">See more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-sm-3">
+          <div class="card">
+            <img src="../images/picmahinhcong.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Màn hình</h5>
+              <p class="card-text">Màn hình cong Samsung LS27CG552 27"</p>
+              <a href="#" class="btn btn-primary">See more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <img src="../images/picedra.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Màn hình</h5>
+              <p class="card-text">Màn hình E-DRA EGM25F100 25" IPS 100</p>
+              <a href="#" class="btn btn-primary">See more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <img src="../images/pictaingheedra.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Tai Nghe</h5>
+              <p class="card-text">Tai nghe E-Dra EH412 Pro RGB USB 7.1 </p>
+              <a href="#" class="btn btn-primary">See more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <img src="../images/pictainghecossa.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Tai Nghe</h5>
+              <p class="card-text">Tai nghe Corsair Virtuoso RGB Wireless Pearl</p>
               <a href="#" class="btn btn-primary">See more</a>
             </div>
           </div>
