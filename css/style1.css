@@ -62,8 +62,6 @@ html, body {
     position: absolute;
     left: 0;
     top: 0;
-    opacity: 0;
-    transition: all 0.3s ease;
   }
    
   .left-column img.active {
@@ -212,7 +210,7 @@ html, body {
    
     .left-column,
     .right-column {
-      width: 100%;
+      width: 150%;
     }
    
     .left-column img {
@@ -228,6 +226,15 @@ html, body {
       width: 220px;
       top: -85px;
     }
+  }
+
+ 
+
+  #tilteCol {
+    width: 32%;
+    font-weight: bold;
+    background-color: lightgray;
+    text-align: center;
   }
 
 
