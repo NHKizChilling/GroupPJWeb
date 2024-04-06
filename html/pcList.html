@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/pclist.css">
-    <script src="../JS/bootstrap.bundle.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="//theme.hstatic.net/200000722513/1001090675/14/favicon.png?v=4609" type="image/png">
@@ -20,8 +20,75 @@
           <nav class="navbar navbar-expand-sm p-0">
               <div class="container-fluid">
                   <a href="../index.html" class="navbar-brand"><img src="../images/logo.png" class="img-fluid" style="width: auto;height: 4em;" alt=""></a>
-                  <input type="search" class="rounded-pill" placeholder="Search here...">
-              </div>
+                  <form action="" class="search-box">
+                    <div id="search-box">
+                        <input type="text" name="search-text" id="search-text" placeholder="Search here..." title="Enter text to search product" required>
+                        <button type="submit" id="search-btn"><i class="fa fa-search"></i></button>
+                    </div>
+                    <div id="result-box">
+                        go go go <br>go <br>go <br>go
+                    </div>
+                  </form>
+                  <style>
+                    #search-box {
+                        background-color: #fff;
+                        display: inline-block;
+                        border-radius: 30px;
+                        font-weight: normal;
+                        min-height: 1em;
+                    }
+                    #search-box #search-text {
+                        border: none;
+                        outline: none;
+                        background: none;
+                        font-size: 1em;
+                        width: 0;
+                        padding: 0;
+                        transition: all 0.25s ease-in-out;
+                    }
+
+                    #search-box:hover #search-text, #search-box #search-text:valid {
+                        width: 15em;
+                        padding: 10px 0px 10px 15px;
+                    }
+
+                    #search-box #search-btn {
+                        border: none;
+                        background: #fff;
+                        padding: 10px;
+                        padding-right: 15px;
+                        cursor: pointer;
+                        border-radius: 50%;
+                        font-size: 1em;
+                    }
+                    .search-box {
+                        position: relative;
+                    }
+                    #result-box::before {
+                        content: "";
+                        position: absolute;
+                        top: -5%;
+                        left: 0;
+                        width: 0;
+                        height: 0;
+                        border: 10px solid transparent;
+                        border-bottom-color: #fff;
+                        border-top: none;
+                        margin-left: 10px;
+                    }
+
+                    #result-box {
+                        position: absolute;
+                        top: 120%;
+                        left: 0;
+                        width: 100%;
+                        display: none;
+                        background-color: #fff;
+                        border-radius: 5px;
+                    }
+
+                  </style>              
+        </div>
                   <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
                       <span class="navbar-toggler-icon"></span>
                   </button>
