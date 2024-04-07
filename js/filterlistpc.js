@@ -103,6 +103,107 @@ let listProducts = [
     image: '../images/pc1.png',
     link: '../html/pc1.html'
 },
+{
+    id: 10,
+    name: 'Tai Nghe Chụp Tai Dây Gaming VH530',
+    category: 'Headphones',
+    brand: 'VH530',
+    price: 490000,
+    quantiy: 30,
+    image: '../images/black.png',
+    link: '../html/headphone1.html'
+},
+{
+    id: 11,
+    name: 'Tai Nghe Gaming không dây Corsair Virtuoso RGB 7.1 Surround',
+    category: 'Headphones',
+    brand: 'Corsair',
+    price: 2990000,
+    quantiy: 30,
+    image: '../images/TaingheCorsaiVirtuosoRGBWirelessPearl/9011185-ap-gallery-virtuoso-carbon-01_e6d0975e928c4189883b4cc65b374786_e5fc1605bae6453a965f5b4a9c756336_grande.webp',
+    link: '../html/headphone2.html'
+},
+{
+    id: 12,
+    name: 'Tai nghe chơi game E-DRA EH412 PRO',
+    category: 'Headphones',
+    brand: 'E-DRA',
+    price: 1090000,
+    quantiy: 30,
+    image: '../images/Tai ngheE-DraEH412ProRGBUSB7.1/den.jpg',
+    link: '../html/headphone3.html'
+},
+{
+    id: 13,
+    name: 'Tai nghe HiFiMan Arya Organic',
+    category: 'Headphones',
+    brand: 'HiFiMan',
+    price: 25990000,
+    quantiy: 30,
+    image: '../images/Tai nghe HiFiMan Arya Organic/chinh.jpg',
+    link: '../html/headphone4.html'
+},
+{
+    id: 14,
+    name: 'Tai nghe Rhapsodio Supreme V3',
+    category: 'Headphones',
+    brand: 'Rhapsodio',
+    price: 147000000,
+    quantiy: 30,
+    image: '../images/TaingheRhapsodioSupremeV3/5692_tai_nghe_rhapsodio_superme_v3_xuan_vu_audio.jpg',
+    link: '../html/headphone5.html'
+},
+{
+    id: 15,
+    name: 'Màn Hình EDRA EGM24F75',
+    category: 'Monitor',
+    brand: 'EDRA',
+    price: 2990000,
+    quantiy: 30,
+    image: '../images/Manhinh-E-DRA-EGM2510025IPS100/mattruoc.jpg',
+    link: '../html/monitor1.html'
+},
+{
+    id: 16,
+    name: 'Màn hình cong Samsung LS27CG552 27',
+    category: 'Monitor',
+    brand: 'Samsung',
+    price: 4990000,
+    quantiy: 30,
+    image: '../images/ManhinhcongSamsungLS27CG55227/truoc.jpg',
+    link: '../html/monitor2.html'
+},
+{
+    id: 17,
+    name: 'Màn hình Samsung LS27CG510 27 2K 16',
+    category: 'Monitor',
+    brand: 'Samsung',
+    price: 4890000,
+    quantiy: 30,
+    image: '../images/ManhinhSamsungiLS27CG510272K16/picmanhinhSamSung.png',
+    link: '../html/monitor3.html'
+},
+{
+    id: 18,
+    name: 'Màn hình ROG Strix XG 30 9CM',
+    category: 'Monitor',
+    brand: 'ASUS',
+    price: 11390000,
+    quantiy: 30,
+    image: '../images/ROGStrixXG309CM-Screen/truoc.png',
+    link: '../html/monitor4.html'
+},
+{
+    id: 19,
+    name: 'Màn hình ACER Predator X27 144Hz 4K Gsync',
+    category: 'Monitor',
+    brand: 'ACER',
+    price: 69000000,
+    quantiy: 30,
+    image: '../images/AcerPREDATORX27/truoc.jpg',
+    link: '../html/monitor5.html'
+},
+
 
 
 ];
