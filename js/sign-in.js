@@ -54,7 +54,7 @@ const validateInputs = () => {
     const user = JSON.parse(localStorage.getItem(username.value));
     const email = JSON.parse(localStorage.getItem(username.value));
     if((usernameValue == user.name || usernameValue == email.email) && passwordValue == user.pass){
-        window.location.href = "./index.html";
+        window.location.href = "../index.html";
         alert("Login Successful");
     } else {
         setError(password, "Invalid Username or Password");

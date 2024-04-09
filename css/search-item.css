@@ -1,0 +1,101 @@
+
+#search-box {
+    background-color: #fff;
+    display: inline-block;
+    border-radius: 30px;
+    font-weight: normal;
+    min-height: 1em;
+}
+#search-box #search-text {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1em;
+    width: 0;
+    padding: 0;
+    transition: all 0.25s ease-in-out;
+}
+
+#search-box:hover #search-text, #search-box #search-text:valid {
+    width: 15em;
+    padding: 10px 0px 10px 15px;
+}
+
+#search-box #search-btn {
+    border: none;
+    background: #fff;
+    padding: 10px;
+    padding-right: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1em;
+}
+.search-box {
+    position: relative;
+}
+#result-box::before {
+    content: "";
+    position: absolute;
+    top: -5%;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: #fff;
+    border-top: none;
+    margin-left: 10px;
+}
+
+#result-box {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    width: 100%;
+    display: none;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.autocomplete {
+    /*the container must be positioned relative:*/
+    position: relative;
+    display: inline-block;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 110%;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+}
+
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.autocomplete-items div a {
+    text-decoration: none;
+}
+
+.autocomplete-items div:hover {
+    /*when hovering an item:*/
+    color: blue;
+    background-color: whitesmoke;
+}
+
+.autocomplete-active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+}
