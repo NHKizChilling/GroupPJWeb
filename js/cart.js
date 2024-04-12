@@ -1,7 +1,21 @@
-let iconCart = document.querySelector(".iconCart");
-let cartTab = document.querySelector(".cartTab");
-let closeCart = document.querySelector(".close");
-let container = document.querySelector(".container2");
+let iconCart = document.querySelector('.iconCart');
+let cart = document.querySelector('.cart');
+let container = document.querySelector('.container2');
+let close = document.querySelector('.close');
+
+iconCart.addEventListener('click', function(){
+    if(cart.style.right == '-100%'){
+        cart.style.right = '0';
+        // container.style.transform = 'translateX(-200px)';
+    }else{
+        cart.style.right = '-100%';
+        container.style.transform = 'translateX(0)';
+    }
+})
+close.addEventListener('click', function (){
+    cart.style.right = '-100%';
+    container.style.transform = 'translateX(0)';
+})
 
 let listProducts = [
   {
@@ -209,21 +223,6 @@ let listProducts = [
   
   ];
 
-iconCart.addEventListener('click', function () {
-  if (cartTab.style.right == "-100%") {
-    cartTab.style.right = "0";
-    container.style.transform = "translateX(-500px)";
-  } else {
-    cartTab.style.right = "-100%";
-    container.style.transform = "translateX(0)";
-  }
-});
-
-
-closeCart.addEventListener('click', function () {
-  cartTab.style.right = "-100%";
-  container.style.transform = "translateX(0)";
-});
 
 //use cookie so the cart doesn't get lost on refresh page
 let listCart = [];
