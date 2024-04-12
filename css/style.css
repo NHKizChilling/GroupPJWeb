@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-.header {
-    font-weight: bolder;
-    
-}
 
 .banner {
     background-image: linear-gradient(to right, lightblue, white);
@@ -23,9 +19,8 @@ html, body {
     height: 100%;
     width: 100%;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    
-  }
+    font-family: 'Roboto', sans-serif;  
+}
    
   .container1 {
     max-width: 1200px;

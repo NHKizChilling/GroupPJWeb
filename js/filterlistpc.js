@@ -275,9 +275,13 @@ function showProduct(productFilter){
         // create button
         let newButton = document.createElement('button');
         newButton.classList.add('btn');
-        newButton.classList.add('btn-primary');
+        newButton.classList.add('btn-danger');
+        newButton.classList.add('rounded-pill');
         newButton.style.float = 'left';
-        newButton.innerText = 'See more';
+        //thêm vào nút mua hàng với class là addCart
+        newButton.classList.add('addCart');
+        newButton.innerText = 'Mua hàng';
+        
         newButton.addEventListener('click', function(){
             window.location.href = item.link;
         })
