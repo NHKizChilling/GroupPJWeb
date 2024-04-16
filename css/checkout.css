@@ -109,3 +109,43 @@ a {
   color: blue;
   font-weight: bolder;
 }
+
+@media (max-width: 768px) {
+  .checkoutLayout {
+    grid-template-columns: 1fr;
+  }
+  .checkoutLayout .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .checkoutLayout .right .form {
+    grid-template-columns: 1fr;
+  }
+  .checkoutLayout .right .form h1,
+  .checkoutLayout .right .form .group:nth-child(-n + 6) {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+  .checkoutLayout .right .return .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .checkoutLayout .right .return .row div:nth-child(2) {
+    margin-top: 10px;
+  }
+  .returnCart .list .item {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  .returnCart .list .item img {
+    height: 60px;
+  }
+  .returnCart .list .item .name,
+  .returnCart .list .item .returnPrice {
+    font-size: medium;
+  }
+  .back {
+    margin-top: 20px;
+  }
+}

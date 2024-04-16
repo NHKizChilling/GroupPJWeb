@@ -351,11 +351,56 @@ function addCartToHTML(){
 }
 
 let checkoutBtn = document.querySelector('#checkoutBtn');
-checkoutBtn.onclick = () => {
-    localStorage.removeItem('listCart');
-    listCart = [];
-    addCartToHTML();
-    alert('Thanh toán thành công! Cảm ơn bạn đã mua hàng tại cửa hàng chúng tôi!');
-    //go back to home page
-    window.location.href = '../index.html';
+
+//validate form
+let form = document.querySelector('.form');
+let ten = document.querySelector('#name');
+let phone = document.querySelector('#phone');
+let address = document.querySelector('#address');
+let email = document.querySelector('#email');
+let city = document.querySelector('#city');
+
+
+
+checkoutBtn.onclick = (e) => {
+    e.preventDefault();
+    let checkValid = true;
+    if(ten.value == ''){
+        //regex
+        if(!/^[a-zA-Z ]{2,30}$/.test(ten.value)){
+            alert('Tên không hợp lệ!');
+            ten.focus();
+            checkValid = false;
+        }
+    } 
+    else if(phone.value == ''){
+        if(!/^[0-9]{10}$/.test(phone.value)){
+            alert('Số điện thoại không hợp lệ!');
+            phone.focus();
+            checkValid = false;
+        }
+    } 
+    else if(address.value == ''){
+        alert('Vui lòng nhập địa chỉ của bạn!');
+        address.focus();
+    } 
+    else if(email.value == ''){
+        if(!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email.value)){
+            alert('Email không hợp lệ!');
+            email.focus();
+            checkValid = false;
+        }
+    } else if(city.value == ''){
+        alert('Vui lòng nhập thành phố của bạn!');
+        email.focus();        
+    } else {
+        localStorage.removeItem('listCart');
+        listCart = [];
+        addCartToHTML();
+        alert('Thanh toán thành công! Cảm ơn bạn đã mua hàng tại cửa hàng chúng tôi!');
+        //go back to home page
+        window.location.href = '../index.html';
+    }
 }
+
+
