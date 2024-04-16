@@ -389,10 +389,7 @@ checkoutBtn.onclick = (e) => {
             alert('Email không hợp lệ!');
             email.focus();
             checkValid = false;
-        }
-    } else if(city.value == ''){
-        alert('Vui lòng nhập thành phố của bạn!');
-        email.focus();        
+        }    
     } else {
         localStorage.removeItem('listCart');
         listCart = [];
