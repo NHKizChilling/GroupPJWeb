@@ -5,7 +5,7 @@ const listItems = [
     { name: "Tai nghe HiFiMan Arya Organic", link: "../html/headphone4.html" },
     { name: "Tai nghe Rhapsodio Supreme V3", link: "../html/headphone5.html" },
     { name: "Màn Hình EDRA EGM24F75 (23.8 inch - FHD - IPS - 75Hz - 1ms)", link: "../html/monitor1.html" },
-    { name: "Màn hình cong Samsung LS27CG552 27", link: "./html/monitor2.html" },
+    { name: "Màn hình cong Samsung LS27CG552 27", link: "../html/monitor2.html" },
     { name: "Màn hình Samsung LS27CG510 27", link: "../html/monitor3.html" },
     { name: "Màn hình ROG Strix XG309CM", link: "../html/monitor4.html" },
     { name: "Màn hình Acer PREDATOR X27", link: "../html/monitor5.html" },
@@ -18,7 +18,17 @@ const listItems = [
     { name: "Laptop Lenovo Yoga 9 2in1 14IMH9 83AC000SVN", link: "../html/lap2.html" },
     { name: "Laptop ASUS Vivobook 14 OLED A1405VA KM095W", link: "../html/lap3.html" },
     { name: "Laptop gaming ASUS ROG Strix G16 G614JU N3777W", link: "../html/lap4.html" },
-    { name: "Laptop gaming ASUS ROG Zephyrus G16 GU605MV QR196WS", link: "../html/lap5.html" }
+    { name: "Laptop gaming ASUS ROG Zephyrus G16 GU605MV QR196WS", link: "../html/lap5.html" },
+    { name: "Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 black Pro", link: "../html/keyboard1.html" },
+    { name: "Bàn phím cơ Mountain Everest MAX Xám MX Brown Switch", link: "../html/keyboard2.html" },
+    { name: "Bàn phím Vortex 8700 MultiX Summer Silver", link: "../html/keyboard3.html" },
+    { name: "Bàn phím cơ E-Dra EK375 Alpha Red Switch", link: "../html/keyboard4.html" },
+    { name: "Bàn phím cơ không dây DAREU EK75 PRO", link: "../html/keyboard5.html" },
+    { name: "Chuột Logitech MX Master 3 Wireless (Graphite)", link: "../html/mouse1.html" },
+    { name: "Chuột Logitech G502X Plus Lightspeed White", link: "../html/mouse2.html" },
+    { name: "Chuột Logitech G Pro Wireless", link: "../html/mouse3.html" },
+    { name: "Chuột Rapoo Không dây V300SE Black", link: "../html/mouse4.html" },
+    { name: "Chuột SteelSeries Aerox 5", link: "../html/mouse5.html" }
 ];
 function autocomplete(inp) {
     /*the autocomplete function takes two arguments,

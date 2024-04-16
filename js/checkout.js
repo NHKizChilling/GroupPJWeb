@@ -1,9 +1,3 @@
-
-let list = document.getElementById('list');
-let filter = document.querySelector('.filter');
-let count = document.getElementById('count');
-
-
 const listProducts = [
     {
         id: 1,
@@ -212,7 +206,7 @@ const listProducts = [
         brand: 'AKKO',
         price: 2290000,
         quantiy: 30,
-        image: '../images/BpcAKKO5075BPlus-SBlack&SilverAkkoSwitchv3CreamYellowPro/chinhdien.png',
+        image: '../images/BpcAKKO5075BPlus-SBlack&SilverAkkoSwitchv3CreamYellowPro/chinhdien.jpg',
         link: '../html/keyboard1.html'
     },
     {
@@ -252,7 +246,7 @@ const listProducts = [
         brand: 'DAREU',
         price: 1890000,
         quantiy: 30,
-        image: '../images/BanphimcoBluetoothDareuEK75Pro/keyboard2.jpg',
+        image: '../images/BanphimcoBluetooth Dareu EK75 Pro/keyboard2.jpg',
         link: '../html/keyboard5.html'
     },
     {
@@ -267,7 +261,7 @@ const listProducts = [
     },
     {
         id: 26,
-        name: 'Chuột Logitech G502X Plus Lightspeed White',
+        name: 'Chuotn LogitechG502XPlusLightSpeed White',
         category: 'Mouse',
         brand: 'Logitech',
         price: 3090000,
@@ -280,7 +274,7 @@ const listProducts = [
         name: 'Chuột Logitech G Pro Wireless',
         category: 'Mouse',
         brand: 'Logitech',
-        price: 1500000,
+        price: 2490000,
         quantiy: 30,
         image: '../images/ChuotLogitechGProWireless/chinh.jpg',
         link: '../html/mouse3.html'
@@ -290,7 +284,7 @@ const listProducts = [
         name: 'Chuột Rapoo Không dây V300SE Black',
         category: 'Mouse',
         brand: 'Rapoo',
-        price: 790000,
+        price: 990000,
         quantiy: 30,
         image: '../images/chuotrambo/chuotrambochinhdetail.jpg',
         link: '../html/mouse4.html'
@@ -300,7 +294,7 @@ const listProducts = [
         name: 'Chuột SteelSeries Aerox 5',
         category: 'Mouse',
         brand: 'SteelSeries',
-        price: 1290000,
+        price: 1490000,
         quantiy: 30,
         image: '../images/ChuotSteelSeriesAerox5/chinh.jpg',
         link: '../html/mouse5.html'
@@ -308,180 +302,9 @@ const listProducts = [
     
     
 ];
-let productFilter = listProducts;
-listProducts.sort((a, b) => a.price - b.price);
-showProduct(productFilter);
-
-filter.addEventListener('submit', function(event){
-    event.preventDefault();
-    let valueFilter = event.target.elements;
-    productFilter = listProducts.filter(item => {
-        // check category
-        if(valueFilter.category.value != ''){
-            if(item.category != valueFilter.category.value){
-                return false;
-            }
-        }
-        if(valueFilter.brand.value != ''){
-            if(item.brand != valueFilter.brand.value){
-                return false;
-            }
-        }
-        // check price
-        if(valueFilter.minprice.value != ''){
-            if(item.price < valueFilter.minprice.value){
-                return false;
-            }
-        }
-        if(valueFilter.maxprice.value != ''){
-            if(item.price > valueFilter.maxprice.value){
-                return false;
-            }
-        }
-        document.getElementById('countResults').removeAttribute('hidden');
-        return true;
-    })
-    showProduct(productFilter);
-})
-
-filter.addEventListener('reset', function(){
-    document.getElementById('countResults').setAttribute('hidden', true);
-    document.getElementById("brand").setAttribute("hidden", "true");
-    document.getElementById("lb-brand").setAttribute("hidden", "true");
-    productFilter = listProducts;
-    showProduct(productFilter);
-})
-// Add missing import statement for jQuery library
-function showProduct(productFilter){
-    count.innerText = productFilter.length;
-    list.innerHTML = '';
-    productFilter.forEach(item => {
-        let newItem = document.createElement('div');
-        newItem.classList.add('item');
-        newItem.setAttribute('id', item.id);
-
-        // create image
-        let newImage = new Image();
-        newImage.src = item.image;
-        newItem.appendChild(newImage);
-        // create name product
-        let newTitle = document.createElement('div');
-        newTitle.classList.add('title');
-        newTitle.classList.add('m-0');
-        newTitle.innerText = item.name;
-        newItem.appendChild(newTitle);
-
-        // create price
-        let newPrice = document.createElement('p');
-        newPrice.classList.add('price');
-        newPrice.classList.add('p-4');
-        newPrice.innerText = item.price.toLocaleString() + 'đ';
-        
-        // create button
-        let newButton = document.createElement('button');
-        newButton.classList.add('btn');
-        newButton.classList.add('btn-danger');
-        newButton.classList.add('rounded-pill');
-        newButton.style.float = 'left';
-        //thêm vào nút mua hàng với class là addCart
-        newButton.classList.add('addCart');
-        newButton.innerText = 'Mua hàng';
-
-        let newButton2 = document.createElement('button');
-        newButton2.classList.add('btn');
-        newButton2.classList.add('btn-info');
-        newButton2.classList.add('rounded-pill');
-        newButton2.style.float = 'right';
-        
-        //thêm nút xem chi tiết dung để bật modal
-        newButton2.innerText = 'Xem chi tiết';
-        newButton2.setAttribute('data-bs-toggle', 'modal');
-        newButton2.setAttribute('data-bs-target', '#productModal');
-        newButton2.classList.add('btn');
-        newButton2.classList.add('btn-info');
-        //sài nút chi tiết để dẫn vào trang khác
-        newButton2.addEventListener('click', function(){
-            window.location.href = item.link;
-        })
-       
-        newItem.appendChild(newPrice);
-        newItem.appendChild(newButton);
-        newItem.appendChild(newButton2);
-        list.appendChild(newItem);
-    });
-}
 
 
-
-
-// cart
-let iconCart = document.querySelector('.iconCart');
-let cart = document.querySelector('.cart');
-let container = document.querySelector('.container');
-let close = document.querySelector('.close');
-let cartListHTML = document.querySelector('.listCart');
-let iconCartSpan = document.querySelector('.iconCart span');
-
-iconCart.addEventListener('click', function(){
-    if(cart.style.right == '-100%'){
-        cart.style.right = '0';
-        container.style.transform = 'translateX(-150px)';
-    }else{
-        cart.style.right = '-100%';
-        container.style.transform = 'translateX(0)';
-    }
-})
-close.addEventListener('click', function (){
-    cart.style.right = '-100%';
-    container.style.transform = 'translateX(0)';
-})
-
-
-
-//use cookie so the cart doesn't get lost on refresh page
 let listCart = [];
-list.addEventListener('click', (event) => {
-    let postionClick = event.target;
-    if(postionClick.classList.contains('addCart')){
-        let product_id = postionClick.parentElement.getAttribute('id');
-        addToCart(product_id);
-    }
-})
-//add to cart with modal
-// let modal = document.querySelector('.modal');
-// modal.addEventListener('click', (event) => {
-//     let postionClick = event.target;
-//     if(postionClick.classList.contains('addCart')){
-//         let product_id = postionClick.parentElement.getAttribute('id');
-//         alert(product_id);
-//         addToCart(product_id);
-//     }
-// })
-
-
-const addToCart = (product_id) => {
-    let positonThisProduct = listCart.findIndex((item) => item.product_id == product_id);
-    if(listCart.length <= 0){
-        listCart = [{
-            product_id: product_id,
-            quantity: 1,
-        }]
-    } else if(positonThisProduct < 0){
-        listCart.push({
-            product_id: product_id,
-            quantity: 1,
-        })
-    } else{
-        listCart[positonThisProduct].quantity += 1;
-    }
-    addCartToHTML();
-    addCartToMemory();
-}
-
-const addCartToMemory = () => {
-    localStorage.setItem('listCart', JSON.stringify(listCart));
-}
-
 const getCartFromMemory = () => {
     if(localStorage.getItem('listCart')){
         listCart = JSON.parse(localStorage.getItem('listCart'));
@@ -489,67 +312,50 @@ const getCartFromMemory = () => {
     }
 }
 
+getCartFromMemory();
+addCartToHTML();
+function addCartToHTML(){
+    // clear data default
+    let listCartHTML = document.querySelector('.returnCart .list');
+    listCartHTML.innerHTML = '';
 
-const addCartToHTML = () => {
-    cartListHTML.innerHTML = '';
+    let totalQuantityHTML = document.querySelector('.totalQuantity');
+    let totalPriceHTML = document.querySelector('.totalPrice');
     let totalQuantity = 0;
-    if(listCart.length > 0) {
-        listCart.forEach((item) => {
-            totalQuantity += item.quantity;
-            let newCart = document.createElement('div');
-            newCart.classList.add('item');
-            newCart.setAttribute('id', item.product_id);
-            let product = listProducts.find((product) => product.id == item.product_id);
-            newCart.innerHTML = `
-            <img src="${product.image}" alt="">
-            <div class="title">${product.name}</div>
-            <div class="quantity">Số lượng: ${item.quantity}</div>
-            <div class="price">${(product.price * item.quantity).toLocaleString()}đ</div>
-            <div class="quantity">
-                <span class="minus">-</span>
-                <span> ${item.quantity} </span>
-                <span class="plus">+</span>
-            </div>
-            `;
-        cartListHTML.appendChild(newCart);
+    let totalPrice = 0;
+
+    // if has product in Cart
+    if(listCart){
+        listCart.forEach(item => {
+            if(item){
+                let newCart = document.createElement('div');
+                newCart.classList.add('item');
+                let product = listProducts.find((product) => product.id == item.product_id);
+                newCart.setAttribute('id', item.product_id);
+                newCart.innerHTML = 
+                    `<img src="${product.image}"/>
+                    <div class="info">
+                        <div class="name">${product.name}</div>
+                        <div class="price">$${product.price}/1 item</div>
+                    </div>
+                    <div class="quantity">${item.quantity}</div>
+                    <div class="returnPrice">${(product.price * item.quantity).toLocaleString()}đ</div>`;
+                listCartHTML.appendChild(newCart);
+                totalQuantity = totalQuantity + item.quantity;
+                totalPrice = totalPrice + (product.price * item.quantity);
+            }
         })
     }
-    iconCartSpan.innerText = totalQuantity;
-    console.log(listCart);
+    totalQuantityHTML.innerText = totalQuantity;
+    totalPriceHTML.innerText =totalPrice.toLocaleString() + 'đ';
 }
 
-cartListHTML.addEventListener('click', (event) => {
-    let postionClick = event.target;
-    if(postionClick.classList.contains('plus') || postionClick.classList.contains('minus')){
-        let product_id = postionClick.parentElement.parentElement.getAttribute('id');
-        let type = 'minus';
-        if(postionClick.classList.contains('plus')){
-            type = 'plus';
-        }
-        changeQuantity(product_id, type);
-    }
-})
-
-const changeQuantity = (product_id, type) => {
-    let positonThisProduct = listCart.findIndex((item) => item.product_id == product_id);
-    if(positonThisProduct >=0 ) {
-        switch(type) {
-            case 'plus':
-                listCart[positonThisProduct].quantity += 1;
-                break;
-
-            default: 
-                let valueChange = listCart[positonThisProduct].quantity - 1;
-                if(valueChange <= 0){
-                    listCart.splice(positonThisProduct, 1);
-                } else {
-                    listCart[positonThisProduct].quantity = valueChange;
-                }
-                break;
-        }
-    }
+let checkoutBtn = document.querySelector('#checkoutBtn');
+checkoutBtn.onclick = () => {
+    localStorage.removeItem('listCart');
+    listCart = [];
     addCartToHTML();
-    addCartToMemory();
+    alert('Thanh toán thành công! Cảm ơn bạn đã mua hàng tại cửa hàng chúng tôi!');
+    //go back to home page
+    window.location.href = '../index.html';
 }
-
-getCartFromMemory();

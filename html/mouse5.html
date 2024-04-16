@@ -1,148 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
-    <link rel="stylesheet" href="../CSS/style.css">
-    <script src="../JS/jquery-3.7.1.min.js"> </script>
-    <script src="../JS/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/search-item.css">
+  <link rel="stylesheet" href="../css/cart.css">
+  <script src="../js/search-item.js"></script>
+  <script src="../js/jquery-3.7.1.min.js"> </script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="//theme.hstatic.net/200000722513/1001090675/14/favicon.png?v=4609" type="image/png">
     <title>Chuột SteelSeries Aerox 5</title>
 </head>
 <body>
-    <div class="container-fluid m-0 p-0" style="background-color: #00062A;">
-        <div class="container">
-          <!-- Start header -->
-          <div class="header">
-            <nav class="navbar navbar-expand-sm p-0">
-                <div class="container-fluid">
-                    <a href="../index.html" class="navbar-brand"><img src="../images/logo.png" class="img-fluid" style="width: auto;height: 4em;" alt=""></a>
-                    <form action="" class="search-box">
-                      <div id="search-box">
-                          <input type="text" name="search-text" id="search-text" placeholder="Search here..." title="Enter text to search product" required>
-                          <button type="submit" id="search-btn"><i class="fa fa-search"></i></button>
-                      </div>
-                      <div id="result-box">
-                          go go go <br>go <br>go <br>go
-                      </div>
-                    </form>
-                    <style>
-                      #search-box {
-                          background-color: #fff;
-                          display: inline-block;
-                          border-radius: 30px;
-                          font-weight: normal;
-                          min-height: 1em;
-                      }
-                      #search-box #search-text {
-                          border: none;
-                          outline: none;
-                          background: none;
-                          font-size: 1em;
-                          width: 0;
-                          padding: 0;
-                          transition: all 0.25s ease-in-out;
-                      }
-  
-                      #search-box:hover #search-text, #search-box #search-text:valid {
-                          width: 15em;
-                          padding: 10px 0px 10px 15px;
-                      }
-  
-                      #search-box #search-btn {
-                          border: none;
-                          background: #fff;
-                          padding: 10px;
-                          padding-right: 15px;
-                          cursor: pointer;
-                          border-radius: 50%;
-                          font-size: 1em;
-                      }
-                      .search-box {
-                          position: relative;
-                      }
-                      #result-box::before {
-                          content: "";
-                          position: absolute;
-                          top: -5%;
-                          left: 0;
-                          width: 0;
-                          height: 0;
-                          border: 10px solid transparent;
-                          border-bottom-color: #fff;
-                          border-top: none;
-                          margin-left: 10px;
-                      }
-  
-                      #result-box {
-                          position: absolute;
-                          top: 120%;
-                          left: 0;
-                          width: 100%;
-                          display: none;
-                          background-color: #fff;
-                          border-radius: 5px;
-                      }
-  
-                    </style>              </div>
-                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-                        <span class="navbar-toggler-icon"></span>
+  <div class="container2" style="background-color: #00062a">
+    <!-- Header -->
+    <div class="container">
+      <!-- Start header -->
+      <header>
+        <nav class="navbar navbar-expand-sm p-0">
+          <div class="logo-container">
+            <a href="../index.html" class="navbar-brand">
+              <img src="../images/logo.png" class="img-fluid" style="width: auto; height: 4em" alt=""/>
+            </a>
+          </div>
+          <button type="button" class="navbar-toggler text-white bg-light" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <form autocomplete="off" action="../html/pcList.html" class="search-box">
+                  <div class="autocomplete" id="search-box">
+                    <input type="text" autocomplete="off" name="search-text" id="search-text" placeholder="Search here..." title="Enter text to search product" required/>
+                    <button type="submit" id="search-btn">
+                      <i class="fa fa-search"></i>
                     </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="menu">
-                        <ul class="navbar-nav">
-                            <li class="nav-item"><a href="../index.html" class="nav-link text-white"><i class="fa fa-home fa-lg"></i> Home</a></li>
-                            <li class="nav-item mx-3"><a href="pcList.html" class="nav-link text-white"><i class="fa fa-bars fa-lg"></i> Products</a></li>
-                            <li class="nav-item"><a href="#con_and_sup" class="nav-link text-white"><i class="fa fa-phone"></i> Contacts</a></li>
-                            <li class="nav-item"><a href="" class="nav-link text-white"><i class="fa fa-shopping-cart fa-lg"></i><br>Cart</a></li>
-                        </ul>
-                    </div>
-                    <div class="btn-group w-25 rounded-5" id="btn-group">
-                      <button type="button" id="btn-signin" class="btn btn-secondary rounded-5 ps-0 pe-0 w-50">
-                        Sign in
-                      </button>
-                      <button type="button" id="btn-signup" class="btn btn-light rounded-end-5 ps-0 pe-0 border-0">
-                        Sign up
-                      </button>
-                    </div>
-                    <script>
-                      document.getElementById("btn-group").style.backgroundColor = "white";
-                      document.getElementById("btn-signin").addEventListener("click", function(){
-                        window.location.href = "sign-in.html";
-                      });
-                      document.getElementById("btn-signup").addEventListener("click", function(){
-                        window.location.href = "sign-up.html";
-                      });
-                      document.getElementById("btn-signup").addEventListener("mouseover", function(){
-                        document.getElementById("btn-group").style.backgroundColor = "gray";
-                        document.getElementById("btn-signup").style.backgroundColor = "gray";
-                      });
-                      document.getElementById("btn-signup").addEventListener("mouseout", function(){
-                        document.getElementById("btn-group").style.backgroundColor = "white";
-                        document.getElementById("btn-signup").style.backgroundColor = "white";
-                      });
-                    </script>
-                </div>
-            </nav>
-        </div>
-      <!-- End header -->
+                  </div>
+                </form>
+                <script>
+                  autocomplete(document.getElementById("search-text"));
+                </script>
+              </li>
+              <li class="nav-item">
+                <a href="../index.html" class="nav-link text-white">
+                  <i class="fa fa-home fa-lg">Home</i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../html/pcList.html" class="nav-link text-white">
+                  <i class="fa fa-bars fa-lg">Products</i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#con_and_sup" class="nav-link text-white">
+                  <i class="fa fa-phone fa-lg">Contacts</i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../html/sign-in.html" class="nav-link text-white">
+                  <i class="fa fa-user fa-lg">Sign in</i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../html/sign-up.html" class="nav-link text-white">
+                  <i class="fa fa-user-plus fa-lg">Sign up</i>
+                </a>
+              </li>
+              <li class="nav-item iconCart">
+                <i class="fa fa-shopping-cart fa-2x text-white"></i>
+                <span>0</span>
+            </li>
+            </ul>
+          </div>
+          <!-- <div class="btn-group w-25 rounded-5" id="btn-group">
+            <button type="button" id="btn-signin" class="btn btn-secondary rounded-5 ps-0 pe-0 w-50">
+              Sign in
+            </button>
+            <button type="button" id="btn-signup" class="btn btn-light rounded-end-5 ps-0 pe-0 border-0">
+              Sign up
+            </button>
+          </div> -->
+          
+          
+
+          <!-- <div class="iconCart">
+            <i class="fa fa-shopping-cart fa-2x text-white"></i>
+            <span>0</span>
+          </div> -->
+        </nav>
+      </header>
     </div>
-    <div class="container1">
+    <!-- End header --> 
+  </div>
+  <marquee width="100%" direction="right" height="4%">
+    Welcome to our website. We are happy to serve you.
+  </marquee>
+
+    <div class="container1 row">
  
         <!-- Left Column / Headphones Image -->
-        <div class="left-column">
-            <img data-image="black" class="active" src="../ChuotSteelSeriesAerox5/chinh.jpg" alt="" >
+        <div class="left-column col-6">
+            <img data-image="black" class="active" src="../images/ChuotSteelSeriesAerox5/chinh.jpg" alt="" >
           </div>
 
        
         <!-- Right Column -->
-        <div class="right-column">
+        <div class="right-column col-6">
        
           <!-- Product Description -->
           <div class="product-description">
-            <h3>Chuột SteelSeries Aerox 5</h3>
+            <h2 class="fw-bold text-info">Chuột SteelSeries Aerox 5</h2>
             <h2>Thông tin chung</h2>
             <table class="table table-striped">
               <thead>
@@ -227,64 +198,91 @@
                 <button>Long-coiled</button>
                 </div>
        
-                    <a href="#">How to configurate your mouse</a>
+                    <a href="#">How to configurate your Mouse</a>
                 </div>
 
             </div>
        
           <!-- Product Pricing -->
-            <div class="product-price">
-                <span>1.950.000 vnd</span>
-                <a href="#" class="cart-btn">Mua hàng</a>
+            <div class="product-price" id="29">
+                <span class="fw-bold text-danger">1.290.000₫</span>
+                <a href="#" class="cart-btn addCart">Thêm vào giỏ hàng</a>
               
             </div>
         </div>
-        <div class="headphonesdff">
-        </div>
-    </div>
-    <div class="row mt-4">
-        <div class="col-sm-3">
-          <div class="card">
-            <img src="../ChuotLogitechG502XPlusLightSpeed White/picindexLogictech.jpg" class="card-img-top" alt="..." style="width: 99%;">
-            <div class="card-body">
-              <h5 class="card-title">Mouse</h5>
-              <p class="card-text">ChuotLogitechG502XPlusLight <br>SpeedWhite</p>
-              <a href="mouse1lightsp.html" class="btn btn-primary">See more</a>
-            </div>
-          </div>
-        </div>
         
+    </div>
+
+    <h2 class="text-center">Sản phẩm liên quan</h2>
+    <div class="row mt-4 px-4">
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="../images/ChuotLogitechGProWireless/chinh.jpg" class="card-img-top" alt="..." style="height: 350px;">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Chuột Logitech G Pro Wireless</h5>
+            <p class="card-text fw-bold"><span style="color: red;">1.500.000 đ</span></p>
+            <a href="../html/mouse3.html" class="btn btn-primary">See more</a>
+          </div>
+        </div>
+      </div>  
         <div class="col-sm-3">
           <div class="card">
-            <img src="../chuotrambo/chuotrambokhongdaychinh.jpg" class="card-img-top" alt="...">
+            <img src="../images/chuotrambo/chuotrambochinhdetail.jpg" class="card-img-top" alt="..." style="height: 350px;">
             <div class="card-body">
-              <h5 class="card-title">Mouse</h5>
-              <p class="card-text">Chuột Rapoo Không dây V300SE Black</p>
-              <a href="mouserapo.html" class="btn btn-primary">See more</a>
+              <h5 class="card-title fw-bold">Chuột Rapoo Không dây V300SE</h5>
+              <p class="card-text fw-bold"><span style="color: red;">790.000 đ</span></p>
+              <a href="../html/mouse4.html" class="btn btn-primary">See more</a>
             </div>
           </div>
         </div>
-        <div class="col-sm-3">
-          <div class="card">
-            <img src="../ChuotLogitechMXMaster3Wireless(Graphite)/h_mx_master_3_wireless__graphite_.webp" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Mouse</h5>
-              <p class="card-text">Chuột Logitech MX Master 3 Wireless (Graphite)</p>
-              <a href="master.html" class="btn btn-primary">See more</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="card">
-            <img src="../phmMonsGeekM1QMKSilverAKKOSwitchv3CreamYellowPro/chinh.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Bàn Phim</h5>
-              <p class="card-text">Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro</p>
-              <a href="product5.html" class="btn btn-primary">See more</a>
-            </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="../images/ChuotLogitechMXMaster3Wireless(Graphite)/chinhdetail.jpg" class="card-img-top" alt="..." style="height: 350px">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Chuột Logitech MX Master 3 Wireless</h5>
+            <p class="card-text fw-bold"><span style="color: red;">1.950.000 đ</span></p>
+            <a href="../html/mouse1.html" class="btn btn-primary">See more</a>
           </div>
         </div>
       </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="../images/ChuotLogitechG502XPlusLightSpeed White/picindexLogictech.jpg" class="card-img-top" alt="..." style="height: 350px;">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Chuột Logictech G502XP Plus Lightspeed White</h5>
+            <p class="card-text fw-bold"><span style="color: red;">1.950.000 đ</span></p>
+            <a href="../html/mouse2.html" class="btn btn-primary">See more</a>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- Cart -->
+    <div class="cart" style="z-index: 2;">
+      <h1>Giỏ hàng</h1>
+      <div class="listCart">
+        <div class="item" hidden>
+          <div class="image">
+            <img src="../images/lap1.webp" alt=""/>
+          </div>
+          <div class="content">
+            <div class="name">NAME</div>
+            <div class="totalPrice">10.490.000₫</div>
+          </div>
+          <div class="quantity">
+            <span class="minus">-</span>
+            <span>1</span>
+            <span class="plus">+</span>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="close">Đóng</button>
+        <button class="checkout"><a href="../html/checkout.html">Thành toán</a></button>
+      </div>
+    </div>
+    <!-- End of cart -->
+
 <!-- Product Pricing -->
     <!-- Footer -->
     <div class="footer bg-black p-4 text-light mt-4" id="con_and_sup">
@@ -345,6 +343,7 @@
     </div>
     <!-- Scripts -->
     
-    <script src="../JS/script.js" charset="utf-8"></script>
+    <script src="../js/script.js" charset="utf-8"></script>
+    <script src="../js/cart.js" charset="utf-8"></script>
 </body>
 </html>
