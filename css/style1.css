@@ -1,0 +1,58 @@
+@media screen and (max-width: 925px) {
+  #menu-hide {
+    display: block;
+  }
+  #btn-menu {
+    display: block;
+  }
+  #btn-group {
+    display: none;
+  }
+  #btn-group1 {
+    display: block;
+  }
+}
+@media screen and (min-width: 925px) {
+  #menu-hide {
+    display: none;
+  }
+  #btn-menu {
+    display: none;
+  }
+  #btn-group1 {
+    display: none;
+  }
+  #btn-group {
+    display: inline-block;
+  }
+}
+
+#btn-group1 {
+  display: inline-block;
+  width: 200px;
+  border-radius: 20px;
+  background-color: white;
+  z-index: 1;
+}
+#btn-signup1 {
+  padding-left: 20px;
+  position: absolute;
+  z-index: 2;
+  width: 120px;
+  left: 100px;
+  background-color: transparent;
+  border-radius: 20px;
+  border: none;
+  transition: all 0.25s;
+}
+#btn-signin1 {
+  position: relative;
+  z-index: 3;
+  width: 120px;
+  border-radius: 20px;
+  border: none;
+}
+#btn-signup1:hover {
+  background-color: gray;
+  padding-right: -5px;
+}

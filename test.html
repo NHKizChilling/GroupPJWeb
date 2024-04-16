@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style1.css">
+  <link rel="stylesheet" href="./css/cart.css">
+  <link rel="stylesheet" href="./css/search-item.css">
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/search-item.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="//theme.hstatic.net/200000722513/1001090675/14/favicon.png?v=4609" type="image/png">
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+      <div class="container">
+        <a href="../index.html" class="navbar-brand"
+          ><img
+            src="./images/logo.png"
+            class="img-fluid"
+            style="width: 4em; height: 40px"
+            alt=""
+        /></a>
+        <form
+          autocomplete="off"
+          action="./pcList.html"
+          class="search-box me-3 pe-5"
+        >
+          <div class="autocomplete" id="search-box">
+            <input
+              type="text"
+              autocomplete="off"
+              name="search-text"
+              id="search-text"
+              placeholder="Search here..."
+              title="Enter text to search product"
+              required
+            />
+            <button type="submit" id="search-btn">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </form>
+
+        <script>
+          autocomplete(document.getElementById("search-text"));
+        </script>
+        <button
+          id="btn-menu"
+          class="btn btn-dark border-2 border-light"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#menu-hide"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-start text-bg-dark" id="menu-hide">
+          <div class="offcanvas-header">
+            <h1 class="offcanvas-title">Menu</h1>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="../index.html" class="nav-link text-white"
+                  ><i class="fa fa-home fa-lg">Home</i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pcList.html" class="nav-link text-white"
+                  ><i class="fa fa-bars fa-lg">Products</i></a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="#con_and_sup" class="nav-link text-white"
+                  ><i class="fa fa-phone fa-lg">Contacts</i></a
+                >
+              </li>
+              <li class="nav-item">
+                <div class="iconCart">
+                    <i class="fa fa-shopping-cart fa-lg text-white"></i>
+                    <span>0</span>
+                </div>
+            </li>
+            </ul>
+            <div id="btn-group1">
+              <button
+                type="button"
+                id="btn-signin1"
+                class="btn btn-secondary"
+                onclick="signIn()"
+              >
+                Sign in
+              </button>
+              <button
+                type="button"
+                id="btn-signup1"
+                class="btn btn-light"
+                onclick="signUp()"
+              >
+                Sign up
+              </button>
+            </div>
+          </div>
+        </div>
+        <script>
+          var offcanvasElementList = [].slice.call(
+            document.querySelectorAll(".offcanvas")
+          );
+          var offcanvasList = offcanvasElementList.map(function (offcanvasEl) {
+            return new bootstrap.Offcanvas(offcanvasEl);
+          });
+        </script>
+
+        <div class="collapse navbar-collapse justify-content-end" id="menu">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="../index.html" class="nav-link text-white"
+                ><i class="fa fa-home fa-lg">Home</i>
+              </a>
+            </li>
+            <li class="nav-item mx-3">
+              <a href="pcList.html" class="nav-link text-white"
+                ><i class="fa fa-bars fa-lg">Products</i></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#con_and_sup" class="nav-link text-white"
+                ><i class="fa fa-phone fa-lg">Contacts</i></a
+              >
+            </li>
+
+            <div class="iconCart">
+                <i class="fa fa-shopping-cart fa-lg text-white"></i>
+                <span>0</span>
+            </div>
+            
+          </ul>
+        </div>
+        <div class="btn-group" id="btn-group">
+          <button
+            type="button"
+            id="btn-signin"
+            class="btn btn-secondary"
+            onclick="signIn()"
+          >
+            Sign in
+          </button>
+          <button
+            type="button"
+            id="btn-signup"
+            class="btn btn-light"
+            onclick="signUp()"
+          >
+            Sign up
+          </button>
+          <style>
+            #btn-group {
+              width: 200px;
+              border-radius: 20px;
+              background-color: white;
+              z-index: 1;
+              position: relative;
+            }
+            #btn-signup {
+              position: absolute;
+              z-index: 2;
+              width: 120px;
+              left: 90px;
+              background-color: transparent;
+              border-radius: 20px;
+              border: none;
+              transition: all 0.5s;
+            }
+            #btn-signin {
+              position: relative;
+              z-index: 3;
+              width: 120px;
+              border-radius: 20px;
+              border: none;
+            }
+            #btn-signup:hover {
+              background-color: gray;
+              padding-right: -30px;
+            }
+          </style>
+        </div>
+        
+      </div>
+    </nav>
+    <div class="container1"></div>
+    <!-- Cart -->
+    <div class="cart" style="z-index: 10;">
+        <h1>Giỏ hàng</h1>
+        <div class="listCart">
+          <div class="item" hidden>
+            <div class="image">
+              <img src="./images/lap1.webp" alt="" />
+            </div>
+            <div class="content">
+              <div class="name">NAME</div>
+              <div class="totalPrice">10.490.000₫</div>
+            </div>
+            <div class="quantity">
+              <span class="minus">-</span>
+              <span>1</span>
+              <span class="plus">+</span>
+            </div>
+          </div>
+        </div>
+        <div class="buttons">
+          <button class="close">Đóng</button>
+          <button class="checkout"><a href="./html/checkout.html">Thành toán</a></button>
+        </div>
+      </div>
+      <!-- End of cart -->  
+      <script src="./js/cart.js"></script>
+    </div>
+  </body>
+
+</html>
