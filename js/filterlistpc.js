@@ -346,8 +346,6 @@ filter.addEventListener('submit', function(event){
 
 filter.addEventListener('reset', function(){
     document.getElementById('countResults').setAttribute('hidden', true);
-    document.getElementById("brand").setAttribute("hidden", "true");
-    document.getElementById("lb-brand").setAttribute("hidden", "true");
     productFilter = listProducts;
     showProduct(productFilter);
 })
